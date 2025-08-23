@@ -60,8 +60,8 @@ def main():
             
             with st.spinner("Analyzing..."):
                 try:
-                    # Replace with your actual Railway API URL
-                    api_url = "https://your-app.railway.app/predict"
+                    # Replaced the actual Railway API URL
+                    api_url = "https://exoplanet-detection-system-production.up.railway.app/predict"
                     
                     response = requests.post(
                         api_url, 
