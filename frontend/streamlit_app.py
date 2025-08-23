@@ -17,7 +17,7 @@ st.markdown("**AI-powered exoplanet discovery - completely free!**")
 st.sidebar.title("🆓 System Info")
 st.sidebar.info("""
 - **Training**: Google Colab (Free)
-- **API**: Railway (Free tier)
+- **API**: Render (Free tier)
 - **Frontend**: Streamlit Cloud (Free)
 - **Data**: NASA TESS (Free)
 - **Total Cost**: $0.00/month! 💰
@@ -33,23 +33,23 @@ def main():
         
         with col1:
             st.subheader("Light Curve Statistics")
-            mean_flux = st.number_input("Mean Flux", value=1.0, step=0.01)
-            std_flux = st.number_input("Std Flux", value=0.01, step=0.001)
-            median_flux = st.number_input("Median Flux", value=1.0, step=0.01)
-            min_flux = st.number_input("Min Flux", value=0.98, step=0.01)
-            max_flux = st.number_input("Max Flux", value=1.02, step=0.01)
+            mean_flux = st.number_input("Mean Flux", value=1.0, step=0.0001, format="%.4f")
+            std_flux = st.number_input("Std Flux", value=0.01, step=0.0001, format="%.4f")
+            median_flux = st.number_input("Median Flux", value=1.0, step=0.0001, format="%.4f")
+            min_flux = st.number_input("Min Flux", value=0.98, step=0.0001, format="%.4f")
+            max_flux = st.number_input("Max Flux", value=1.02, step=0.0001, format="%.4f")
             
         with col2:
             st.subheader("Additional Features")
-            p25 = st.number_input("25th Percentile", value=0.99, step=0.01)
-            p75 = st.number_input("75th Percentile", value=1.01, step=0.01)
-            p90 = st.number_input("90th Percentile", value=1.015, step=0.01)
+            p25 = st.number_input("25th Percentile", value=0.99, step=0.0001, format="%.4f")
+            p75 = st.number_input("75th Percentile", value=1.01, step=0.0001, format="%.4f")
+            p90 = st.number_input("90th Percentile", value=1.015, step=0.0001, format="%.4f")
             deep_dips = st.number_input("Deep Dips Count", value=0, step=1)
-            avg_change = st.number_input("Average Change", value=0.0, step=0.001)
-            length = st.number_input("Data Points", value=1000, step=100)
-            variance = st.number_input("Variance", value=0.0001, step=0.0001)
-            skewness = st.number_input("Skewness", value=0.0, step=0.1)
-            kurtosis = st.number_input("Kurtosis", value=3.0, step=0.1)
+            avg_change = st.number_input("Average Change", value=0.0, step=0.0001, format="%.4f")
+            length = st.number_input("Data Points", value=1000, step=1)
+            variance = st.number_input("Variance", value=0.0001, step=0.000001, format="%.6f")
+            skewness = st.number_input("Skewness", value=0.0, step=0.01, format="%.2f")
+            kurtosis = st.number_input("Kurtosis", value=3.0, step=0.01, format="%.2f")
         
         if st.button("🚀 Detect Exoplanet", type="primary"):
             features = [
@@ -60,7 +60,7 @@ def main():
             
             with st.spinner("Analyzing..."):
                 try:
-                    # Replaced the actual render API URL
+                    # Updated to use the new Render API URL
                     api_url = "https://exoplanet-detection-system.onrender.com/predict"
                     
                     response = requests.post(
@@ -169,7 +169,7 @@ def main():
         
         ### 🔧 Technical Stack
         - **Training**: Google Colab (free GPU)
-        - **Backend**: FastAPI on Railway (free tier)
+        - **Backend**: FastAPI on Render (free tier)
         - **Frontend**: Streamlit Community Cloud
         - **Storage**: Google Drive + GitHub
         - **Monitoring**: UptimeRobot (free plan)
@@ -177,7 +177,7 @@ def main():
         ### 🎯 Getting Started
         1. Clone the repository
         2. Run training notebook in Google Colab
-        3. Deploy API to Railway
+        3. Deploy API to Render
         4. Deploy this app to Streamlit Cloud
         5. Start detecting exoplanets! 🪐
         
@@ -186,6 +186,4 @@ def main():
         """)
 
 if __name__ == "__main__":
-
     main()
-
