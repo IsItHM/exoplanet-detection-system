@@ -60,8 +60,8 @@ def main():
             
             with st.spinner("Analyzing..."):
                 try:
-                    # Replaced the actual Railway API URL
-                    api_url = "https://exoplanet-detection-system-production-395d.up.railway.app/predict"
+                    # Replaced the actual render API URL
+                    api_url = "https://exoplanet-detection-system.onrender.com/predict"
                     
                     response = requests.post(
                         api_url, 
@@ -188,3 +188,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
