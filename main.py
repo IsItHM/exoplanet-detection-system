@@ -15,7 +15,7 @@ async def load_model():
     global model, scaler
     
     try:
-        # These URLs will be replaced with your Google Drive links
+        # These are my Google Drive's converted links
         model_url = "https://drive.google.com/uc?export=download&id=1uEDH1KYFVJT0JMAJv7RB7CrC5R8ssdEh"
         scaler_url = "https://drive.google.com/uc?export=download&id=1GZ24DClGlKSQLqp1lKiCmQ1bGy9VZvIc"
         
