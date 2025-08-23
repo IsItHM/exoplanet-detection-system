@@ -16,8 +16,8 @@ async def load_model():
     
     try:
         # These URLs will be replaced with your Google Drive links
-        model_url = "YOUR_GOOGLE_DRIVE_DIRECT_LINK_TO_MODEL"
-        scaler_url = "YOUR_GOOGLE_DRIVE_DIRECT_LINK_TO_SCALER"
+        model_url = "https://drive.google.com/uc?export=download&id=1uEDH1KYFVJT0JMAJv7RB7CrC5R8ssdEh"
+        scaler_url = "https://drive.google.com/uc?export=download&id=1GZ24DClGlKSQLqp1lKiCmQ1bGy9VZvIc"
         
         # Download model from Google Drive
         print("Downloading model from Google Drive...")
