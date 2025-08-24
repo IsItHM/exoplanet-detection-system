@@ -89,7 +89,7 @@ def main():
                         st.error(f"API Error: {response.status_code}")
                         
                 except requests.exceptions.RequestException:
-                    st.warning("⏰ API is sleeping (free tier). Try the demo below!")
+                    st.warning("⏰ API is sleeping (free tier).")
     
     with tab2:
         st.header("📊 Interactive Demo")
@@ -187,3 +187,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
